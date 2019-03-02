@@ -10,11 +10,11 @@ import persistence.Repository;
 import java.util.logging.Logger;
 
 public class Main extends Application {
-    //private static final Logger log = Logger.getLogger(Main.class.getName());
+    private static final Logger log = Logger.getLogger(Main.class.getName());
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //log.info("Starting application");
+        log.info("Starting application");
         Repository repository = new Repository();
         repository.getAll();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("admin.fxml"));
@@ -34,7 +34,7 @@ public class Main extends Application {
             stage.show();
         }
         primaryStage.show();
-        //log.info("Windows launched");
+        log.info("Windows launched");
 
     }
 
