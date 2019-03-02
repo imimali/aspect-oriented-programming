@@ -73,8 +73,10 @@ public class MainController extends Subject {
 
     @FXML
     private void updateCandidate() {
-        if (this.selectedCandidate != null)
-            repository.update(this.selectedCandidate);
+        if (this.selectedCandidate != null) {
+            Candidate candidate = new Candidate(selectedCandidate.getId(), nameTextField.getText(), Integer.valueOf(votesTextField.getText()));
+            repository.update(candidate);
+        }
         populateCandidatesList();
         notifyObservers();
     }

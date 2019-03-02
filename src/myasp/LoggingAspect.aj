@@ -6,7 +6,7 @@ public aspect LoggingAspect {
     private static final Logger log = Logger.getLogger(LoggingAspect.class.getName());
     pointcut logMessage():execution(public * sample.MainController.*(..));
     before():logMessage(){
-        log.info(thisJoinPoint.getSignature()+ " method entered");
+        log.info(thisJoinPoint.getSignature() + " method entered");
         //System.out.println(Thread.currentThread().getStackTrace()[2].getMethodName()+" method entered");
     }
     after():logMessage(){
