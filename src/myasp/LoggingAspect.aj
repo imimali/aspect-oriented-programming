@@ -1,8 +1,15 @@
 package myasp;
 
+import java.util.logging.Logger;
+
 public aspect LoggingAspect {
-    pointcut logMessage():execution(public * MainController.*(..));
+    private static final Logger log = Logger.getLogger(LoggingAspect.class.getName());
+    pointcut logMessage():execution(public * sample.MainController.*(..));
     before():logMessage(){
-        System.out.println(Thread.currentThread().getStackTrace()[2].getMethodName()+" method entered");
+        log.info(thisJoinPoint.getSignature()+ " method entered");
+        //System.out.println(Thread.currentThread().getStackTrace()[2].getMethodName()+" method entered");
+    }
+    after():logMessage(){
+        log.info(thisJoinPoint.getSignature() + " method finished");
     }
 }
