@@ -29,7 +29,8 @@
                </font>
             </Label>
             <ListView fx:id="candidatesListView" prefHeight="200.0" prefWidth="200.0" />
-            <Button fx:id="voteButton" mnemonicParsing="false" onAction="#voteCandidate" prefHeight="26.0" prefWidth="90.0" text="Vote" />
+            <Button fx:id="voteButton" mnemonicParsing="false" onAction="#upVoteCandidate" prefHeight="26.0" prefWidth="90.0" text="UpVote" />
+            <Button fx:id="downButton" mnemonicParsing="false" onAction="#downVoteCandidate" text="DownVote" />
          </children>
       </VBox>
    </children>

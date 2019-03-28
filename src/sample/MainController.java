@@ -10,7 +10,7 @@ import persistence.Repository;
 
 import java.util.List;
 
-public class MainController extends Subject {
+public class MainController /*extends Subject*/ {
     @FXML
     private ListView<Candidate> candidatesList;
 
@@ -32,6 +32,10 @@ public class MainController extends Subject {
     private Repository repository;
     private Candidate selectedCandidate = null;
 
+    public void setRepository(Repository repository) {
+        this.repository = repository;
+    }
+
     @FXML
     public void initialize() {
         populateCandidatesList();
@@ -39,6 +43,7 @@ public class MainController extends Subject {
     }
 
     public MainController() {
+
         this.repository = new Repository();
     }
 
@@ -51,13 +56,13 @@ public class MainController extends Subject {
         }
     }
 
-    @Override
+   /* @Override
     public void notifyObservers() {
         super.notifyObservers();
         populateCandidatesList();
-    }
+    }*/
 
-    private void populateCandidatesList() {
+    public void populateCandidatesList() {
         List<Candidate> candidates = repository.getAll();
         candidatesList.getItems().setAll(candidates);
     }
@@ -68,7 +73,7 @@ public class MainController extends Subject {
         Candidate candidate = new Candidate(name, 0);
         repository.store(candidate);
         populateCandidatesList();
-        notifyObservers();
+        //  notifyObservers();
     }
 
     @FXML
@@ -76,7 +81,7 @@ public class MainController extends Subject {
         if (this.selectedCandidate != null)
             repository.update(this.selectedCandidate);
         populateCandidatesList();
-        notifyObservers();
+        //notifyObservers();
     }
 
     @FXML
@@ -84,7 +89,7 @@ public class MainController extends Subject {
         if (this.selectedCandidate != null) {
             repository.delete(selectedCandidate.getId());
             populateCandidatesList();
-            notifyObservers();
+            //  notifyObservers();
         }
     }
 }

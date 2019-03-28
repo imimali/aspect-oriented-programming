@@ -1,5 +1,6 @@
 package sample;
 
+import asp.SubjectChangerMethod;
 import custom.MyObserver;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +11,7 @@ import persistence.Repository;
 
 import java.util.List;
 
-public class VoterController extends MyObserver {
+public class VoterController/* extends MyObserver*/ {
     @FXML
     private Label nameLabel;
 
@@ -20,12 +21,23 @@ public class VoterController extends MyObserver {
     @FXML
     private Button voteButton;
 
+    @FXML
+    private Button downButton;
+
     private Repository repository;
     private Candidate selectedCandidate = null;
+
+    public void setRepository(Repository repository) {
+        this.repository = repository;
+    }
 
     public VoterController() {
         repository = new Repository();
 
+    }
+
+    public void sayHelloToMain(MainController mainController) {
+        System.out.println("saying hello to main controller: " + mainController);
     }
 
     public void initialize() {
@@ -33,12 +45,12 @@ public class VoterController extends MyObserver {
         candidatesListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> selectCandidate());
     }
 
-    @Override
+   /* @Override
     public void update() {
         populateCandidatesList();
-    }
+    }*/
 
-    private void populateCandidatesList() {
+    public void populateCandidatesList() {
         List<Candidate> candidates = repository.getAll();
         candidatesListView.getItems().setAll(candidates);
     }
@@ -51,11 +63,26 @@ public class VoterController extends MyObserver {
     }
 
     @FXML
-    private void voteCandidate() {
+    @SubjectChangerMethod
+    private void upVoteCandidate() {
         if (selectedCandidate != null) {
-            Candidate candidate = new Candidate(selectedCandidate.getId(), selectedCandidate.getName(), selectedCandidate.getVotes() + 1);
+            Candidate candidate = new Candidate(selectedCandidate.getId(),
+                    selectedCandidate.getName(),
+                    selectedCandidate.getVotes() + 1);
             repository.update(candidate);
-            subject.notifyObservers();
+            // subject.notifyObservers();
+        }
+    }
+
+    @FXML
+    @SubjectChangerMethod
+    private void downVoteCandidate() {
+        if (selectedCandidate != null) {
+            Candidate candidate = new Candidate(selectedCandidate.getId(),
+                    selectedCandidate.getName(),
+                    selectedCandidate.getVotes() - 1);
+            repository.update(candidate);
+            // subject.notifyObservers();
         }
     }
 

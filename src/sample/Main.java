@@ -16,18 +16,21 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         //log.info("Starting application");
         Repository repository = new Repository();
-        repository.getAll();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("admin.fxml"));
 
         Parent root = loader.load();
         primaryStage.setTitle("Hello World");
         MainController mainController = loader.getController();
+        mainController.setRepository(repository);
+
         primaryStage.setScene(new Scene(root, 500, 375));
         for (int i = 0; i < 2; i++) {
             FXMLLoader loader1 = new FXMLLoader(getClass().getResource("sample.fxml"));
             Parent root1 = loader1.load();
             VoterController voterController = loader1.getController();
-            mainController.registerObserver(voterController);
+            voterController.sayHelloToMain(mainController);
+            //mainController.registerObserver(voterController);
+            voterController.setRepository(repository);
             loader1.setController(voterController);
             Stage stage = new Stage();
             stage.setScene(new Scene(root1, 400, 400));
