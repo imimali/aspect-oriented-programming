@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>        
+
+ <!DOCTYPE aspectj PUBLIC
+        "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd"> 
+<aspectj>
+
+    <weaver options="-verbose -showWeaveInfo">
+
+        <!-- only weave classes in our application-specific packages -->
+        
+
+    </weaver>
+
+    <aspects>
+
+        <!-- weave in just this aspect -->        
+        <aspect name="concurs.aspects.LoggingConcursTracingAspect"/>
+
+    </aspects>
+
+  </aspectj>

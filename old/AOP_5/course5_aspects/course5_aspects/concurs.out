@@ -1,0 +1,262 @@
+Apr 7, 2014 12:26:51 AM contest.repository.mock.ParticipantRepositoryMock populate_aroundBody1$advice
+INFO: Operation ParticipantRepositoryMock.populate() took 1674781 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.repository.mock.ParticipantRepositoryMock getAll_aroundBody7$advice
+INFO: Operation ParticipantRepositoryMock.getAll() took 389837 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Contest getParticipants_aroundBody7$advice
+INFO: Operation Contest.getParticipants() took 827476 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getPunctaj_aroundBody7$advice
+INFO: Operation Participant.getPunctaj() took 1184733 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getPunctaj_aroundBody7$advice
+INFO: Operation Participant.getPunctaj() took 1927 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.repository.mock.ParticipantRepositoryMock$1 compare_aroundBody1$advice
+INFO: Operation ParticipantRepositoryMock.1.compare(..) took 2031814 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getPunctaj_aroundBody7$advice
+INFO: Operation Participant.getPunctaj() took 1015 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getPunctaj_aroundBody7$advice
+INFO: Operation Participant.getPunctaj() took 2059 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.repository.mock.ParticipantRepositoryMock$1 compare_aroundBody1$advice
+INFO: Operation ParticipantRepositoryMock.1.compare(..) took 1274827 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.repository.mock.ParticipantRepositoryMock getByPoints_aroundBody11$advice
+INFO: Operation ParticipantRepositoryMock.getByPoints() took 6301471 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Contest getParticipantsByPoints_aroundBody9$advice
+INFO: Operation Contest.getParticipantsByPoints() took 6728050 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.StartApp main_aroundBody1$advice
+INFO: Operation StartApp.main(..) took 81873842 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.gui.ContestWindow creeazaMeniu_aroundBody5$advice
+INFO: Operation ContestWindow.creeazaMeniu() took 8145002 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ContestCtrl getParticipantiTableModel_aroundBody1$advice
+INFO: Operation ContestCtrl.getParticipantiTableModel() took 2570 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiTableModel.getColumnCount() took 7200 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiTableModel.getColumnName(..) took 2060 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiTableModel.getColumnCount() took 2035 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiTableModel.getColumnName(..) took 720 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiTableModel.getColumnCount() took 1213 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiTableModel.getColumnName(..) took 714 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiTableModel.getColumnCount() took 1243 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.gui.ContestWindow creeazaTabelParticipanti_aroundBody3$advice
+INFO: Operation ContestWindow.creeazaTabelParticipanti() took 16893055 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.gui.GUIUtils putInPanel_aroundBody1$advice
+INFO: Operation GUIUtils.putInPanel(..) took 109820 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.gui.GUIUtils putInPanel_aroundBody1$advice
+INFO: Operation GUIUtils.putInPanel(..) took 88047 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.gui.GUIUtils putInPanel_aroundBody1$advice
+INFO: Operation GUIUtils.putInPanel(..) took 82979 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.gui.ContestWindow creeazaAdaugaRezultat_aroundBody1$advice
+INFO: Operation ContestWindow.creeazaAdaugaRezultat() took 10845517 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 10160 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1574 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1621 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1285 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 2072 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1363 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1333 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1207 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.StartApp$1 run_aroundBody1$advice
+INFO: Operation StartApp.1.run() took 259510044 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ViewResultsHandler getParticipantiModel_aroundBody1$advice
+INFO: Operation ViewResultsHandler.getParticipantiModel() took 2360 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiResTableModel.getColumnCount() took 8107 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiResTableModel.getColumnName(..) took 2510 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiResTableModel.getColumnCount() took 2150 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiResTableModel.getColumnName(..) took 979 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiResTableModel.getColumnCount() took 2054 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiResTableModel.getColumnName(..) took 1009 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiResTableModel.getColumnCount() took 1387 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiResTableModel.getColumnName(..) took 859 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiResTableModel.getColumnCount() took 1237 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnName_aroundBody1$advice
+INFO: Operation ParticipantiResTableModel.getColumnName(..) took 714 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getColumnCount_aroundBody5$advice
+INFO: Operation ParticipantiResTableModel.getColumnCount() took 2108 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.gui.RankingWindow creeazaTabel_aroundBody1$advice
+INFO: Operation RankingWindow.creeazaTabel() took 6941986 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 22055 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 2096 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1387 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1435 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 3464 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1880 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1567 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1627 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.StartApp$2 run_aroundBody1$advice
+INFO: Operation StartApp.2.run() took 50301591 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 3519 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1694 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1483 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1327 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1459 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1194 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1501 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 21749 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getID_aroundBody3$advice
+INFO: Operation Participant.getID() took 2876 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 391536 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNume_aroundBody1$advice
+INFO: Operation Participant.getNume() took 1910 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 314851 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 3308 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 1861 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getID_aroundBody3$advice
+INFO: Operation Participant.getID() took 763 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 256947 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNume_aroundBody1$advice
+INFO: Operation Participant.getNume() took 709 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 299135 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 2317 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 1465 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getID_aroundBody3$advice
+INFO: Operation Participant.getID() took 799 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 297082 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNume_aroundBody1$advice
+INFO: Operation Participant.getNume() took 799 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiTableModel.getValueAt(..) took 297377 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 4077 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1219 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1333 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1291 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1388 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1375 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1435 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 15564 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getID_aroundBody3$advice
+INFO: Operation Participant.getID() took 894 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 247753 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNume_aroundBody1$advice
+INFO: Operation Participant.getNume() took 685 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 219016 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getPunctaj_aroundBody7$advice
+INFO: Operation Participant.getPunctaj() took 2672 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 257500 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNrProbe_aroundBody5$advice
+INFO: Operation Participant.getNrProbe() took 3897 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 339109 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1453 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 1315 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getID_aroundBody3$advice
+INFO: Operation Participant.getID() took 744 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 234477 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNume_aroundBody1$advice
+INFO: Operation Participant.getNume() took 660 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 261931 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getPunctaj_aroundBody7$advice
+INFO: Operation Participant.getPunctaj() took 2546 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 292014 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNrProbe_aroundBody5$advice
+INFO: Operation Participant.getNrProbe() took 1009 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 208903 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1357 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 1177 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getID_aroundBody3$advice
+INFO: Operation Participant.getID() took 931 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 459005 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNume_aroundBody1$advice
+INFO: Operation Participant.getNume() took 744 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 213719 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getPunctaj_aroundBody7$advice
+INFO: Operation Participant.getPunctaj() took 3129 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 216806 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.model.Participant getNrProbe_aroundBody5$advice
+INFO: Operation Participant.getNrProbe() took 1237 nanoseconds
+Apr 7, 2014 12:26:51 AM contest.ctrl.ParticipantiResTableModel getValueAt_aroundBody7$advice
+INFO: Operation ParticipantiResTableModel.getValueAt(..) took 206934 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 2738 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1381 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1225 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 1225 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 3933 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1345 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1315 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 1165 nanoseconds
+Apr 7, 2014 12:26:52 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 5321 nanoseconds
+Apr 7, 2014 12:26:54 AM contest.gui.RankingWindow access$0_aroundBody3$advice
+INFO: Operation RankingWindow.access$0(..) took 4479 nanoseconds
+Apr 7, 2014 12:26:54 AM contest.ctrl.ViewResultsHandler close_aroundBody5$advice
+INFO: Operation ViewResultsHandler.close() took 3825 nanoseconds
+Apr 7, 2014 12:26:54 AM contest.gui.RankingWindow$1 windowClosing_aroundBody1$advice
+INFO: Operation RankingWindow.1.windowClosing(..) took 1200278 nanoseconds
+Apr 7, 2014 12:26:54 AM contest.ctrl.ParticipantiResTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiResTableModel.getRowCount() took 6587 nanoseconds
+Apr 7, 2014 12:26:54 AM contest.ctrl.ParticipantiTableModel getRowCount_aroundBody3$advice
+INFO: Operation ParticipantiTableModel.getRowCount() took 5998 nanoseconds

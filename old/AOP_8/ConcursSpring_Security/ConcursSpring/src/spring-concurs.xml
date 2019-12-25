@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+
+    <bean id="partRepo" class="concurs.repository.mock.ParticipantRepositoryMock"/> 
+  <!--   <bean id="partRepo" class="concurs.repository.dao.ParticipantJdbcDAO">
+	<property name="dataSource"    ref="dataSource"/> 	
+	</bean> -->
+<bean id="concurs" class="concurs.model.Concurs">
+   <constructor-arg ref="partRepo"/> 
+</bean>
+<bean id="concursCtrl" class="concurs.ctrl.ConcursCtrl">
+  <constructor-arg ref="concurs"/>
+</bean>
+
+<bean id="resultsHandler" class="concurs.ctrl.ViewResultsHandler" scope="prototype">
+	<constructor-arg ref="concurs"/>
+</bean>
+<!--  
+<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+     </bean>
+
+<context:property-placeholder location="concursjdbc.properties"/>
+
+  -->
+ <bean id="traceAspect" class="concurs.aspects.LoggingConcursTracingAspect"/> 
+  
+ <aop:aspectj-autoproxy/>   
+</beans>

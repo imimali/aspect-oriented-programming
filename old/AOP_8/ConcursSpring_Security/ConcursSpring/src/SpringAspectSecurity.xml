@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+
+  <security:authentication-manager
+        alias="authenticationManager">
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="admin" password="admin"
+                    authorities="ROLE_USER,ROLE_SUPERVISOR" />
+                <security:user name="test" password="test"
+                    authorities="ROLE_USER" />
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean id="authenticationSupport" class="ajia.security.AuthenticationSupport">
+        <property name="authenticationManager" ref="authenticationManager" />
+        <property name="loginUI" ref="loginService" />
+    </bean>
+
+    <bean id="loginService" class="concurs.aspects.security.UILoginService" />
+
+    <bean id="authenticationAspect" class="concurs.aspects.security.ConcursAuthenticationAspect">
+         <!-- factory-method="aspectOf">    --> 
+        <property name="authenticationSupport" ref="authenticationSupport" />
+    </bean>
+
+<!-- AUTHORIZATION  -->
+<bean id="accessDecisionManager"
+        class="org.springframework.security.access.vote.UnanimousBased">
+        <constructor-arg name="decisionVoters">
+            <list>
+                <bean
+                    class="org.springframework.security.access.vote.RoleVoter" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="securityMetadataSource" class="ajia.security.MappingBasedSecurityMetadataSource">
+        <property name="roleMapping">
+            <map>
+                <entry key="adaugaP*" value="ROLE_SUPERVISOR" />
+                <entry key="adaugaR*" value="ROLE_USER" />
+            </map>
+        </property>
+    </bean>
+
+    <bean id="authorizationSupport" class="ajia.security.AuthorizationSupport">
+        <property name="accessDecisionManager" ref="accessDecisionManager" />
+        <property name="securityMetadataSource" ref="securityMetadataSource" />
+    </bean>
+    
+    <bean id="authorizationAspect" class="concurs.aspects.security.ConcursAuthorizationAspect">
+         <!--  factory-method="aspectOf">    --> 
+        <property name="authorizationSupport" ref="authorizationSupport" />
+    </bean>
+      <aop:aspectj-autoproxy/>     
+</beans>

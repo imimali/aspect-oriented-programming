@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+
+
+
+
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+    <security:authentication-manager
+            alias="authenticationManager">
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="admin" password="admin"
+                               authorities="ROLE_USER,ROLE_SUPERVISOR"/>
+                <security:user name="test" password="test"
+                               authorities="ROLE_USER"/>
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean id="authenticationSupport" class="security.AuthenticationSupport">
+        <property name="authenticationManager" ref="authenticationManager"/>
+        <property name="loginUI" ref="loginService"/>
+    </bean>
+
+    <bean id="loginService" class="security.SysoutLoginService"/>
+
+    <bean id="authenticationAspect" class="customsec.VotingAuthenticationAspect">
+        <!-- factory-method="aspectOf">    -->
+        <property name="authenticationSupport" ref="authenticationSupport"/>
+    </bean>
+    <!-- AUTHORIZATION  -->
+    <bean id="accessDecisionManager"
+          class="org.springframework.security.access.vote.UnanimousBased">
+        <constructor-arg name="decisionVoters">
+            <list>
+                <bean
+                        class="org.springframework.security.access.vote.RoleVoter"/>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="securityMetadataSource" class="security.MappingBasedSecurityMetadataSource">
+        <property name="roleMapping">
+            <map>
+                <entry key="delete*" value="ROLE_SUPERVISOR"/>
+                <entry key="update*" value="ROLE_USER"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="authorizationSupport" class="security.AuthorizationSupport">
+        <property name="accessDecisionManager" ref="accessDecisionManager"/>
+        <property name="securityMetadataSource" ref="securityMetadataSource"/>
+    </bean>
+
+    <bean id="authorizationAspect" class="customsec.VotingAuthorizationAspect">
+        <!--  factory-method="aspectOf">    -->
+        <property name="authorizationSupport" ref="authorizationSupport"/>
+    </bean>
+    <bean id="tracingAspect" class="myasp.VotingLoggingAspect">
+
+    </bean>
+
+    <bean id="basicRepo" class="persistence.RepositoryImpl">
+    </bean>
+    <bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/aop"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="postgres"/>
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+    <bean id="jdbcRepo" class="persistence.RepositoryJdbcImpl">
+        <constructor-arg ref="jdbcTemplate"/>
+    </bean>
+
+
+    <bean id="springMonitoringAspectInterceptor"
+          class="org.springframework.aop.interceptor.PerformanceMonitorInterceptor">
+        <property name="useDynamicLogger" value="false"/>
+    </bean>
+
+
+    <aop:config>
+        <aop:pointcut id="springMonitoringPointcut"
+                      expression="execution(* persistence.Repository.*(..))"/>
+
+        <aop:advisor pointcut-ref="springMonitoringPointcut"
+                     advice-ref="springMonitoringAspectInterceptor" order="2"/>
+    </aop:config>
+
+    <bean id="performanceMonitoring" class="myasp.PerformanceMonitoringAspect">
+
+    </bean>
+
+
+    <!--<bean id="cacheManager" class="org.springframework.cache.support.SimpleCacheManager">
+        <property name="caches">
+            <set>
+                <bean
+                        class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
+                        name="addresses"/>
+            </set>
+        </property>
+    </bean>-->
+    <!--<bean id="cacheManager" class="myasp.CachingAspect">-->
+
+    <bean id="cacheManager"
+          class="org.springframework.cache.support.SimpleCacheManager">
+        <property name="caches">
+            <set>
+                <bean
+                        class="org.springframework.cache.concurrent.ConcurrentMapCacheFactoryBean"
+                        name="candidates"/>
+            </set>
+        </property>
+    </bean>
+    <!-- define caching behavior -->
+   <!-- <cache:advice id="cachingBehavior" cache-manager="cacheManager">
+        <cache:caching cache="candidates">
+            <cache:cacheable method="getAll"/>
+        </cache:caching>
+    </cache:advice>
+
+    <aop:config>
+        <aop:advisor advice-ref="cachingBehavior"
+                     pointcut="execution(* persistence.Repository.*(..))"/>
+    </aop:config>-->
+    <aop:aspectj-autoproxy/>
+</beans>

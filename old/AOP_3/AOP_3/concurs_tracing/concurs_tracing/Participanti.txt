@@ -1,0 +1,7 @@
+123|Pop Maria|2|46
+23|w e|3|241
+234|Ionescu Mihai|4|322
+45|r t|2|103
+456|Marinescu Ioana|3|124
+678|Vasilescu Ana|1|20
+689|ddd ddd|4|503
